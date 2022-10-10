@@ -2,7 +2,6 @@ import { ParsedUrlQuery } from 'querystring'
 import React from 'react'
 
 export interface PostMeta {
-    author: string,
     title: string,
     description: string,
     tags: string[],

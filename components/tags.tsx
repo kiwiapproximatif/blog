@@ -9,7 +9,7 @@ const Tags = ({tags}: TagsProps) => {
         <Box py={2} maxW="md">
             <Wrap>
                 {tags.map((tag: string, index: number) => (
-                    <WrapItem>
+                    <WrapItem key={`item-${index}-${tag}`}>
                     <Badge mx={0} px={0} key={`${index}-${tag}`}>{tag}</Badge>
                     </WrapItem>
                 ))}

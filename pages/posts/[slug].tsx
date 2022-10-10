@@ -4,6 +4,7 @@ import Base from "../../components/base"
 import { serialize } from 'next-mdx-remote/serialize'
 import Content from "../../components/content"
 import Meta from "../../components/meta"
+import { Helpers } from "../../helpers"
 
 const Post = ({ meta, content }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
@@ -15,21 +16,15 @@ const Post = ({ meta, content }: InferGetStaticPropsType<typeof getStaticProps>)
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const response = await fetch(`${process.env.API_URL}/api/posts/slugs`)
-    const paths = await response.json()
-
-    console.log('paths------------------', paths)
-
     return {
-        paths: paths,
+        paths: Helpers.getAllPostsSlugs(),
         fallback: false
     }
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
     const params = context.params as PostParams
-    const response = await fetch(`${process.env.API_URL}/api/posts/${params.slug}`)
-    const { meta, content }: Post = await response.json()
+    const { meta, content }: Post = Helpers.getPostBySlug(params.slug)
 
     return {
         props: {
