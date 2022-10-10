@@ -26,7 +26,7 @@ jobs:
         run: |
           npm i --legacy-peer-deps
           npm run build
-          npm run export
+          npm run start
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
