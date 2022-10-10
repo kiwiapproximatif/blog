@@ -8,7 +8,7 @@ const POSTS_DIRECTORY = join(process.cwd(), "public/posts")
 const getAllPosts = () => {
     const allPostsFilename = readdirSync(POSTS_DIRECTORY)
 
-    return allPostsFilename.map((filename) => {
+    return allPostsFilename.filter(item => ! /^\..*/).map((filename) => {
         const postFullPath = `${Helpers.POSTS_DIRECTORY}/${filename}`
         const fileContents = readFileSync(postFullPath, "utf8")
         const { data } = matter(fileContents)
@@ -37,9 +37,9 @@ const getPostBySlug = (slug: string) => {
 }
 
 const getAllPostsSlugs = () => {
-    const allPostsFilename = readdirSync(POSTS_DIRECTORY)
+    let allPostsFilename = readdirSync(POSTS_DIRECTORY)
 
-    return allPostsFilename.map((filename) => {
+    return allPostsFilename.filter(item => ! /^\..*/).map((filename) => {
         const postFullPath = `${Helpers.POSTS_DIRECTORY}/${filename}`
         const fileContents = readFileSync(postFullPath, "utf8")
         const { data } = matter(fileContents)
