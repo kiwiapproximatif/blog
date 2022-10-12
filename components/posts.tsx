@@ -33,7 +33,7 @@ const publishedAtFormat = {
     year: "numeric",
     month: "long",
     day: "numeric"
-}
+} as const
 
 const PostTitle = ({...props}: PostTitleProps) => {
     return (
