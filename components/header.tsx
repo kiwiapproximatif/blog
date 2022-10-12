@@ -10,9 +10,8 @@ const Header = () => {
         <Box>
             {isIndex && <Stack mt={8} mb={2}>
                 <Text>
-                    Je m&apos;appelle Maxence Lambard alias
-                    <Link href="https://github.com/kiwiapproximatif"
-                          title=" Kiwi Approximatif"
+                    Je m&apos;appelle Maxence Lambard alias <Link href="https://github.com/kiwiapproximatif"
+                          title="Kiwi Approximatif"
                     />
                     , ingénieur d&apos;études au
                     Laboratoire LITIS à l&apos;Université Le Havre Normandie.
