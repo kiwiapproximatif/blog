@@ -12,7 +12,7 @@ const Header = () => {
                 <Text>
                     Je m&apos;appelle Maxence Lambard alias
                     <Link href="https://github.com/kiwiapproximatif"
-                          title="Kiwi Approximatif"
+                          title=" Kiwi Approximatif"
                     />
                     , ingénieur d&apos;études au
                     Laboratoire LITIS à l&apos;Université Le Havre Normandie.
