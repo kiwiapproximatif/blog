@@ -1,5 +1,5 @@
-import { Center, VStack, Text, Button } from "@chakra-ui/react"
-import { useRouter } from "next/router"
+import {Button, Center, Text, VStack} from "@chakra-ui/react"
+import {useRouter} from "next/router"
 
 const Custom404 = () => {
     const router = useRouter()

@@ -1,14 +1,14 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next"
+import {GetStaticProps, InferGetStaticPropsType} from "next"
 import Base from "../components/base"
-import PostsList from "../components/posts-list"
-import { Helpers } from "../helpers"
-import { PostMeta } from "../types"
+import {PostsList} from "../components/posts"
+import {Helpers} from "../helpers"
+import {PostMeta} from "../types"
 
 
-const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home = ({posts}: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <Base>
-            <PostsList posts={posts} />
+            <PostsList posts={posts}/>
         </Base>
     )
 }

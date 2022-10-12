@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Link as ChakraLink, Text } from '@chakra-ui/react'
+import {Link as ChakraLink, Text} from '@chakra-ui/react'
 
 interface LinkProps {
     href: string,

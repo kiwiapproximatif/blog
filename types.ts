@@ -1,4 +1,4 @@
-import { ParsedUrlQuery } from 'querystring'
+import {ParsedUrlQuery} from 'querystring'
 import React from 'react'
 
 export interface PostMeta {

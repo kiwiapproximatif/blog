@@ -1,6 +1,6 @@
-import { Box, Code as ChakraCode } from "@chakra-ui/react"
+import {Box, Code as ChakraCode} from "@chakra-ui/react"
 import Prism from "prismjs";
-import { useEffect } from "react";
+import {useEffect} from "react";
 
 // PrismJS extensions
 import 'prismjs/plugins/line-numbers/prism-line-numbers.min.js'
@@ -14,7 +14,7 @@ interface CodeProps {
     language: string
 }
 
-const Code = ({ code, language }: CodeProps) => {
+const Code = ({code, language}: CodeProps) => {
     useEffect(() => {
         Prism.highlightAll();
     }, []);
