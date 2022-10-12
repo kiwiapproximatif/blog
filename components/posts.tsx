@@ -120,7 +120,7 @@ export const PostsList = ({posts}: PostsListProps) => {
                     <PostsListItem key={`${index}-${meta.title}`} meta={meta}/>
                 ))
             ) : (
-                <Center><Text>Nevermind... no post.</Text></Center>
+                <Center><Text>Aucun article...</Text></Center>
             )}
 
         </VStack>
