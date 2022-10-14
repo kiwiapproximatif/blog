@@ -64,7 +64,7 @@ const PostTags = ({tags}: PostTagsProps) => {
 const PostDescription = ({...props}: PostDescriptionProps) => {
     return (
         <Box>
-            <Text {...props}>
+            <Text textAlign="justify" {...props}>
                 {props.children}
             </Text>
         </Box>

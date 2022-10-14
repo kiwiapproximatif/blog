@@ -9,7 +9,7 @@ interface ContentProps {
 }
 
 const customComponents = {
-    p: (props: any) => <Text mb={4} {...props} />,
+    p: (props: any) => <Text mb={4} textAlign="justify" {...props} />,
     ul: (props: any) => <UnorderedList {...props} />,
     ol: (props: any) => <OrderedList {...props} />,
     li: (props: any) => <ListItem {...props} />,
