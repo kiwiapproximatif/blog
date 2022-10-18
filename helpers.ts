@@ -12,7 +12,7 @@ const getAllPosts = () => {
         const postFullPath = `${Helpers.POSTS_DIRECTORY}/${filename}`
         const fileContents = readFileSync(postFullPath, "utf8")
         const {data} = matter(fileContents)
-        const {title, author, description, tags, publishedAt} = data
+        const {title, description, tags, publishedAt} = data
 
         return {title, description, tags, publishedAt}
     })
