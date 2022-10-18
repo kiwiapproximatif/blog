@@ -1,4 +1,4 @@
-import {Badge, Box, Center, Flex, Spacer, Text, TextProps, VStack, Wrap, WrapItem} from "@chakra-ui/react"
+import {Badge, Heading, Box, Center, Flex, Spacer, Text, TextProps, VStack, Wrap, WrapItem} from "@chakra-ui/react"
 import {PostMeta as PostMetaInterface} from "../types"
 import Link from "./link"
 
@@ -37,7 +37,7 @@ const publishedAtFormat = {
 
 const PostTitle = ({...props}: PostTitleProps) => {
     return (
-        <Text fontSize="2xl" {...props}>{props.children}</Text>
+        <Heading fontSize="2xl"  {...props}>{props.children}</Heading>
     )
 }
 
@@ -53,7 +53,7 @@ const PostTags = ({tags}: PostTagsProps) => {
             <Wrap>
                 {tags.map((tag: string, index: number) => (
                     <WrapItem key={`item-${index}-${tag}`}>
-                        <Badge mx={0} px={0} key={`${index}-${tag}`}>{tag}</Badge>
+                        <Badge mx={0} px={1} key={`${index}-${tag}`}>{tag}</Badge>
                     </WrapItem>
                 ))}
             </Wrap>
@@ -89,7 +89,7 @@ export const PostMeta = ({meta, isIndex}: PostMetaProps) => {
                     <Flex alignItems={"center"}>
                         <PostSubtitle>Publié le {formattedPublishedAt}</PostSubtitle>
                         <Spacer/>
-                        <Link href={`/posts/${meta.title.replaceAll(" ", "-").toLowerCase()}`} title="Lire la suite"/>
+                        <Link href={`/posts/${meta.title.replaceAll(" ", "-").toLowerCase()}`} title="Lire la suite" arrowDirection="right"/>
                     </Flex>
                 </Box>
             ) : (
