@@ -21,7 +21,7 @@ const Code = ({code, language}: CodeProps) => {
     }, []);
 
     return (
-        <Box mb={4} borderWidth='1px' p={2}>
+        <Box mb={4} borderWidth='1px' p={2} mx='auto' overflow='auto'>
             <ChakraCode
                 background="none"
                 className={language}
