@@ -37,7 +37,7 @@ const publishedAtFormat = {
 
 const PostTitle = ({...props}: PostTitleProps) => {
     return (
-        <Heading fontSize="2xl"  {...props}>{props.children}</Heading>
+        <Heading fontSize="3xl"  {...props}>{props.children}</Heading>
     )
 }
 
